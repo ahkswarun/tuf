@@ -1,0 +1,19 @@
+def armstrong(n):
+    final=n
+    count=0
+    temp=n
+    while temp!=0:
+        count+=1 #to calculate the power
+        temp//=10 #to find number of digits
+    sumofnumbers=0
+    while n!=0:
+        digit=n%10 #remainder will be stored in var digit
+        sumofnumbers+=pow(digit,count)
+        n//=10
+    return sumofnumbers==final #returns true when both are equal
+
+num=int(input("number: "))
+if armstrong(num):
+    print("The number is armstrong number")
+else:
+    print("The number is not armstrong")
